@@ -197,7 +197,7 @@ def main_menu():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if GAME1_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    #MazeDasNew2.main()
+                    MazeDasNew2.main()
                     game_over()
                 if GAME2_BUTTON.checkForInput(MENU_MOUSE_POS):
                     instructions()
