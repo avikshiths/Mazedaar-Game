@@ -16,7 +16,7 @@ def game_over():
     icon=pygame.image.load('gamelogo.png')
     pygame.display.set_icon(icon)
 
-    BGimg = pygame.image.load("gameover_screen.png") 
+    BGimg = pygame.image.load("gameover_screen2.png") 
     def get_font(size): # Returns Press-Start-2P in the desired size
         return pygame.font.Font("font.ttf", size)
     
@@ -24,9 +24,9 @@ def game_over():
         SCREEN.blit(BGimg, (0,0))
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        GAME1_BUTTON = Button(image= None, pos=(230, 250), 
+        GAME1_BUTTON = Button(image= None, pos=(360,400), 
                             text_input="Return to Main Menu", font=get_font(20), base_color="#d7fcd4", hovering_color="#B637BC")
-        GAME2_BUTTON = Button(image=None,pos=(230, 300), 
+        GAME2_BUTTON = Button(image=None,pos=(360,450), 
                             text_input="Exit", font=get_font(18), base_color="#d7fcd4", hovering_color="#B637BC")
 
         for button in [GAME1_BUTTON, GAME2_BUTTON]:
@@ -197,7 +197,7 @@ def main_menu():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if GAME1_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    MazeDasNew2.main()
+                    #MazeDasNew2.main()
                     game_over()
                 if GAME2_BUTTON.checkForInput(MENU_MOUSE_POS):
                     instructions()
